@@ -6,7 +6,7 @@ canvas=createCanvas(300,300);
 canvas.center();
 video=createCapture(VIDEO);
 video.hide();
-classifier=ml5.imageClassifier('',modelLoaded);
+classifier=ml5.imageClassifier('MobileNet',modelLoaded);
 }
 function draw() {
 image(video,0,0,300,300);
@@ -22,7 +22,7 @@ if(error){
 else{
 console.log(results);
 document.getElementById("result_object_name").innerHTML=results[0].label;
-document.getElementById("result_object_accuracy").innerHTML=results[0].confiedence.toFixed(3);
+document.getElementByI("result_object_accuracy").innerHTML=results[0].confidence.toFixed(3);
 
 }
 }
